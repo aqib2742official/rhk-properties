@@ -1,0 +1,303 @@
+/* Custom styles for react-phone-input-2 to match project design */
+
+.phone-input-container {
+  width: 100%;
+}
+
+/* Input field styling to match project InputField */
+.phone-input-field {
+  width: 100% !important;
+  height: 2.75rem !important;
+  padding: 0.625rem 1rem 0.625rem 3.8rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  border-radius: 0.5rem !important;
+  /* Default state - matches InputField default */
+  background-color: transparent !important;
+  color: rgb(31, 41, 55) !important;
+  border: 1px solid rgb(209, 213, 219) !important;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+.phone-input-field:focus {
+  outline: none !important;
+  /* Focus state - matches InputField focus with brand-300 and brand-500/20 ring */
+  border-color: #9cb9ff !important; /* brand-300 */
+  box-shadow: 0 0 0 3px rgba(70, 95, 255, 0.2) !important; /* brand-500/20 ring */
+}
+
+.phone-input-field::placeholder {
+  color: rgb(156, 163, 175) !important; /* gray-400 */
+}
+
+.phone-input-field:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.4 !important;
+  background-color: rgb(243, 244, 246) !important; /* gray-100 */
+  color: rgb(107, 114, 128) !important; /* gray-500 */
+  border-color: rgb(209, 213, 219) !important; /* gray-300 */
+}
+
+/* Button (flag dropdown) styling */
+.phone-input-button {
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  border-right: 1px solid rgb(209, 213, 219) !important; /* gray-300 */
+  border-radius: 0.5rem 0 0 0.5rem !important;
+  padding: 0 0.5rem !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+.phone-input-button:hover {
+  background-color: transparent !important;
+  border: 1px solid rgb(209, 213, 219) !important; /* gray-300 */
+  border-right: 1px solid rgb(209, 213, 219) !important;
+}
+
+.phone-input-button:focus {
+  outline: none !important;
+  border: 1px solid #9cb9ff !important; /* brand-300 */
+  border-right: 1px solid #9cb9ff !important;
+}
+
+.phone-input-button .selected-flag {
+  padding: 0 0.25rem !important;
+}
+
+.phone-input-button .flag {
+  transform: scale(1.2) !important;
+}
+
+/* Hide library's default arrow */
+.phone-input-button .arrow {
+  display: none !important;
+}
+
+/* Custom dropdown arrow using ::after */
+.phone-input-button::after {
+  content: "" !important;
+  display: inline-block !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin-left: 0.5rem !important;
+  border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+  border-top: 5px solid rgb(107, 114, 128) !important;
+  transition: transform 0.2s ease-in-out !important;
+  vertical-align: middle !important;
+  position: relative !important;
+  top: -33px !important;
+  left: 60% !important;
+}
+
+/* Arrow rotates when dropdown is open */
+.phone-dropdown-open .phone-input-button::after {
+  transform: rotate(180deg) !important;
+}
+
+/* Dropdown menu */
+.phone-input-dropdown {
+  background-color: white !important;
+  border: 1px solid rgb(229, 231, 235) !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+  margin-top: 0.25rem !important;
+  max-height: 250px !important;
+  overflow-y: auto !important;
+  position: absolute !important;
+}
+
+/* Dropdown opens upward when there's no space below */
+.phone-input-dropup .phone-input-dropdown {
+  bottom: 100% !important;
+  top: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.phone-input-dropdown .country {
+  padding: 0.5rem 0.75rem !important;
+  transition: background-color 0.15s ease-in-out !important;
+}
+
+.phone-input-dropdown .country:hover {
+  background-color: rgb(243, 244, 246) !important;
+}
+
+.phone-input-dropdown .country.highlight {
+  background-color: rgb(243, 244, 246) !important;
+}
+
+.phone-input-dropdown .country .flag {
+  margin-right: 0.5rem !important;
+}
+
+.phone-input-dropdown .country .country-name {
+  color: rgb(31, 41, 55) !important;
+  font-size: 0.875rem !important;
+}
+
+.phone-input-dropdown .country .dial-code {
+  color: rgb(107, 114, 128) !important;
+  font-size: 0.875rem !important;
+}
+
+/* Search box in dropdown */
+.phone-input-search {
+  width: 100% !important;
+  padding: 0.5rem 0.75rem !important;
+  border: none !important;
+  border-bottom: 1px solid rgb(229, 231, 235) !important;
+  font-size: 0.875rem !important;
+  background-color: rgb(249, 250, 251) !important;
+  color: rgb(31, 41, 55) !important;
+}
+
+.phone-input-search:focus {
+  outline: none !important;
+  background-color: white !important;
+}
+
+.phone-input-search::placeholder {
+  color: rgb(156, 163, 175) !important;
+}
+
+/* Error state - matches InputField error */
+.phone-input-error .phone-input-field {
+  border-color: rgb(239, 68, 68) !important; /* error-500 */
+}
+
+.phone-input-error .phone-input-field:focus {
+  border-color: rgb(252, 165, 165) !important; /* error-300 */
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important; /* error-500/20 ring */
+}
+
+.phone-input-error .phone-input-button {
+  border-right-color: rgb(239, 68, 68) !important; /* error-500 */
+}
+
+.phone-input-error .phone-input-button:hover {
+  border-color: rgb(239, 68, 68) !important; /* error-500 */
+}
+
+.phone-input-error .phone-input-button:focus {
+  border-color: rgb(252, 165, 165) !important; /* error-300 */
+}
+
+/* Disabled state */
+.phone-input-disabled .phone-input-button {
+  cursor: not-allowed !important;
+  opacity: 0.5 !important;
+}
+
+.phone-input-disabled .phone-input-button:hover {
+  background-color: transparent !important;
+}
+
+/* Dark mode support - matches InputField dark mode */
+.dark .phone-input-field {
+  /* Default dark state */
+  border-color: rgb(55, 65, 81) !important; /* gray-700 */
+  background-color: transparent !important;
+  color: rgba(255, 255, 255, 0.9) !important; /* white/90 */
+}
+
+.dark .phone-input-field:focus {
+  /* Focus dark state - brand-800 */
+  border-color: #252dae !important; /* brand-800 */
+  box-shadow: 0 0 0 3px rgba(70, 95, 255, 0.2) !important; /* brand-500/20 ring */
+}
+
+.dark .phone-input-field::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important; /* white/30 */
+}
+
+.dark .phone-input-field:disabled {
+  background-color: rgb(31, 41, 55) !important; /* gray-800 */
+  color: rgb(156, 163, 175) !important; /* gray-400 */
+  border-color: rgb(55, 65, 81) !important; /* gray-700 */
+}
+
+.dark .phone-input-button {
+  border: 1px solid transparent !important;
+  border-right-color: rgb(55, 65, 81) !important; /* gray-700 */
+}
+
+.dark .phone-input-button:hover {
+  background-color: transparent !important;
+  border: 1px solid rgb(55, 65, 81) !important; /* gray-700 */
+  border-right-color: rgb(55, 65, 81) !important;
+}
+
+.dark .phone-input-button:focus {
+  border: 1px solid #252dae !important; /* brand-800 */
+  border-right-color: #252dae !important;
+}
+
+.dark .phone-input-button::after {
+  border-top-color: rgb(156, 163, 175) !important; /* gray-400 */
+}
+
+.dark .phone-input-dropdown {
+  background-color: rgb(17, 24, 39) !important;
+  border-color: rgb(55, 65, 81) !important;
+}
+
+.dark .phone-input-dropdown .country:hover,
+.dark .phone-input-dropdown .country.highlight {
+  background-color: rgb(31, 41, 55) !important;
+}
+
+.dark .phone-input-dropdown .country .country-name {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark .phone-input-dropdown .country .dial-code {
+  color: rgb(156, 163, 175) !important;
+}
+
+.dark .phone-input-search {
+  background-color: rgb(31, 41, 55) !important;
+  border-bottom-color: rgb(55, 65, 81) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark .phone-input-search:focus {
+  background-color: rgb(17, 24, 39) !important;
+}
+
+.dark .phone-input-search::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Dark mode error state - matches InputField dark error */
+.dark .phone-input-error .phone-input-field {
+  border-color: rgb(239, 68, 68) !important; /* error-500 */
+  color: rgb(248, 113, 113) !important; /* error-400 */
+}
+
+.dark .phone-input-error .phone-input-field:focus {
+  border-color: rgb(153, 27, 27) !important; /* error-800 */
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important; /* error-500/20 ring */
+}
+
+.dark .phone-input-error .phone-input-button {
+  border-right-color: rgb(239, 68, 68) !important; /* error-500 */
+}
+
+.dark .phone-input-error .phone-input-button:hover {
+  border-color: rgb(239, 68, 68) !important; /* error-500 */
+}
+
+.dark .phone-input-error .phone-input-button:focus {
+  border-color: rgb(153, 27, 27) !important; /* error-800 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .phone-input-dropdown {
+    max-height: 200px !important;
+  }
+}
+
