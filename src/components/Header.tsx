@@ -16,7 +16,7 @@ export function Header() {
 
   const menuItems = [
     { id: "/", label: "Home", path: "/" },
-    { id: "/properties", label: "Properties", path: "/properties" },
+    // { id: "/properties", label: "Properties", path: "/properties" },
     { id: "/about", label: "About Us", path: "/about" },
     { id: "/blog", label: "Blog", path: "/blog" },
     { id: "/contact", label: "Contact", path: "/contact" },
@@ -38,7 +38,7 @@ export function Header() {
           >
             <img 
               src={theme === 'light' ? logoLight.src : logoDark.src} 
-              alt="AHK Solution" 
+              alt="rhk Properties LLC" 
               className="h-12 w-auto"
             />
           </Link>
@@ -72,20 +72,20 @@ export function Header() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 md:hidden cursor-pointer">
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
             >
               {theme === 'light' ? (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-6 w-6" />
               ) : (
-                <Sun className="h-5 w-5" />
+                <Sun className="h-6 w-6" />
               )}
             </Button>
             <button
-              className="p-2"
+              className="p-2 cursor-pointer"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >

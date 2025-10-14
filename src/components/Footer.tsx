@@ -3,8 +3,8 @@
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "./ThemeProvider";
-import logoLight from "@/assets/840350786d7cf7318d44d3436e8ec101ee73d858.png";
-import logoDark from "@/assets/d0bf4d664322a0a761741d591994a4aa1aea8172.png";
+import logoLight from "@/assets/rhk-properties.svg";
+import logoDark from "@/assets/rhk-properties-dark.svg";
 
 export function Footer() {
   const { theme } = useTheme();
@@ -18,7 +18,7 @@ export function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <img 
                 src={theme === 'dark' ? logoLight.src : logoDark.src} 
-                alt="AHK Solution" 
+                alt="rhk Properties LLC" 
                 className="h-10 w-auto"
               />
             </div>
@@ -53,14 +53,14 @@ export function Footer() {
                   Home
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/properties"
                   className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
                   Properties
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/about"
@@ -121,7 +121,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} AHK Solution. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} rhk Properties LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>

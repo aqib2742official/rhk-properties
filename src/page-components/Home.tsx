@@ -10,17 +10,17 @@ import { properties } from "../data/properties";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function Home() {
-  const featuredProperties = properties.filter(p => p.status === "Available").slice(0, 3);
+  const featuredProperties = properties.filter(p => p.status === "Available").slice(0, 4);
 
   return (
     <div className="w-full">
       {/* Premium Hero Slider */}
       <PremiumSlider />
 
-      {/* Stats Section with 3D Animation */}
-      <section className="py-16 bg-secondary">
+      {/* Why Choose Us Section */}
+      <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div 
               className="text-center"
               initial={{ opacity: 0, y: 50, rotateX: -20 }}
@@ -29,22 +29,14 @@ export function Home() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <motion.div 
-                className="flex justify-center mb-3"
+                className="flex justify-center mb-4"
                 whileHover={{ scale: 1.2, rotateY: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <Building2 className="h-10 w-10 text-accent" />
+                <Building2 className="h-12 w-12 text-accent" />
               </motion.div>
-              <motion.p 
-                className="text-3xl mb-1"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
-                500+
-              </motion.p>
-              <p className="text-muted-foreground">Properties Sold</p>
+              <h3 className="text-lg font-semibold mb-2">Expert Market Knowledge</h3>
+              <p className="text-muted-foreground text-md">Deep understanding of Dubai's real estate landscape</p>
             </motion.div>
             
             <motion.div 
@@ -55,22 +47,14 @@ export function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <motion.div 
-                className="flex justify-center mb-3"
+                className="flex justify-center mb-4"
                 whileHover={{ scale: 1.2, rotateY: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <Users className="h-10 w-10 text-accent" />
+                <Users className="h-12 w-12 text-accent" />
               </motion.div>
-              <motion.p 
-                className="text-3xl mb-1"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                1200+
-              </motion.p>
-              <p className="text-muted-foreground">Happy Clients</p>
+              <h3 className="text-lg font-semibold mb-2">Client-First Approach</h3>
+              <p className="text-muted-foreground text-md">Personalized service tailored to your unique needs</p>
             </motion.div>
             
             <motion.div 
@@ -81,22 +65,14 @@ export function Home() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <motion.div 
-                className="flex justify-center mb-3"
+                className="flex justify-center mb-4"
                 whileHover={{ scale: 1.2, rotateY: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <Award className="h-10 w-10 text-accent" />
+                <Award className="h-12 w-12 text-accent" />
               </motion.div>
-              <motion.p 
-                className="text-3xl mb-1"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
-                15+
-              </motion.p>
-              <p className="text-muted-foreground">Years Experience</p>
+              <h3 className="text-lg font-semibold mb-2">Premium Properties</h3>
+              <p className="text-muted-foreground text-md">Curated selection of luxury real estate across UAE</p>
             </motion.div>
             
             <motion.div 
@@ -107,29 +83,21 @@ export function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <motion.div 
-                className="flex justify-center mb-3"
+                className="flex justify-center mb-4"
                 whileHover={{ scale: 1.2, rotateY: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <CheckCircle2 className="h-10 w-10 text-accent" />
+                <CheckCircle2 className="h-12 w-12 text-accent" />
               </motion.div>
-              <motion.p 
-                className="text-3xl mb-1"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-              >
-                100%
-              </motion.p>
-              <p className="text-muted-foreground">Client Satisfaction</p>
+              <h3 className="text-lg font-semibold mb-2">Seamless Transactions</h3>
+              <p className="text-muted-foreground text-md">End-to-end support from viewing to ownership</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Featured Properties */}
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4">Featured Properties</h2>
@@ -137,7 +105,7 @@ export function Home() {
               Explore our handpicked selection of premium properties in Dubai's most sought-after locations
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 auto-rows-fr">
+          <div className="px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 auto-rows-fr">
             {featuredProperties.map((property) => (
               <PropertyCard
                 key={property.id}
@@ -145,7 +113,7 @@ export function Home() {
               />
             ))}
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             <Button 
               variant="outline"
               size="lg"
@@ -157,7 +125,7 @@ export function Home() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -166,44 +134,57 @@ export function Home() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="mb-6">Why Choose Prime Estates</h2>
-              <div className="space-y-4">
-                <div className="flex gap-4">
+              <h2 className="mb-6 text-2xl">Why Choose rhk Properties LLC</h2>
+              <div className="space-y-3">
+                <div className="flex gap-3">
                   <div className="flex-shrink-0">
-                    <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center">
-                      <CheckCircle2 className="h-6 w-6 text-accent" />
+                    <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="mb-2">Expert Guidance</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="mb-2 font-semibold text-2xl">Expert Guidance</h3>
+                    <p className="text-muted-foreground text-md">
                       Our experienced team provides personalized service and expert advice throughout your property journey.
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-3">
                   <div className="flex-shrink-0">
-                    <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center">
-                      <CheckCircle2 className="h-6 w-6 text-accent" />
+                    <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="mb-2">Prime Locations</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="mb-2 font-semibold text-2xl">Prime Locations</h3>
+                    <p className="text-muted-foreground text-md">
                       Access to exclusive properties in Dubai's most prestigious and desirable neighborhoods.
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-3">
                   <div className="flex-shrink-0">
-                    <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center">
-                      <CheckCircle2 className="h-6 w-6 text-accent" />
+                    <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="mb-2">Transparent Process</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="mb-2 font-semibold text-2xl">Transparent Process</h3>
+                    <p className="text-muted-foreground text-md">
                       Clear communication and transparent processes ensure a smooth and stress-free experience.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="flex-shrink-0">
+                    <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
+                      <CheckCircle2 className="h-5 w-5 text-accent" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="mb-2 font-semibold text-2xl">Investment Expertise</h3>
+                    <p className="text-muted-foreground text-md">
+                      Strategic insights and market analysis to maximize your real estate investment returns.
                     </p>
                   </div>
                 </div>
@@ -253,9 +234,9 @@ export function Home() {
                 image: "https://images.unsplash.com/photo-1726579197785-d738db22a69a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWxtJTIwanVtZWlyYWglMjBkdWJhaXxlbnwxfHx8fDE3NjAzOTA3ODV8MA&ixlib=rb-4.1.0&q=80&w=1080"
               }
             ].map((neighborhood, index) => (
-              <Link href="/properties" key={index}>
+              <div key={index}>
                 <motion.div
-                  className="relative h-80 rounded-lg overflow-hidden group cursor-pointer"
+                  className="relative h-80 rounded-lg overflow-hidden group"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -273,7 +254,7 @@ export function Home() {
                   <p className="text-white/80 text-sm">{neighborhood.properties}</p>
                 </div>
               </motion.div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -343,7 +324,7 @@ export function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div 
             className="text-center mb-12"
@@ -363,7 +344,7 @@ export function Home() {
                 name: "Sarah Williams",
                 role: "Penthouse Owner",
                 image: "https://images.unsplash.com/photo-1513807016779-d51c0c026263?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMGhvbWV8ZW58MXx8fHwxNzYwMzQ0NzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-                text: "AHK Solution made our dream of owning a Dubai property come true. Their professionalism and attention to detail were exceptional."
+                text: "rhk Properties LLC made our dream of owning a Dubai property come true. Their professionalism and attention to detail were exceptional."
               },
               {
                 name: "Ahmed Al-Rashid",
@@ -405,7 +386,7 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 bg-accent text-accent-foreground">
@@ -423,7 +404,6 @@ export function Home() {
             <Button 
               size="lg"
               variant="secondary"
-              className="bg-white text-primary hover:bg-white/90"
               asChild
             >
               <Link href="/contact">

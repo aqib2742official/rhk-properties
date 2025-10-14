@@ -6,38 +6,38 @@ import { motion } from "motion/react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function About() {
-  const teamMembers = [
-    {
-      name: "Mohammed Al Mansouri",
-      role: "CEO & Founder",
-      image: "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0JTIwdGVhbXxlbnwxfHx8fDE3NjA0MjYyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      bio: "15+ years of experience in luxury real estate"
-    },
-    {
-      name: "Sarah Johnson",
-      role: "Head of Sales",
-      image: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZWFsJTIwZXN0YXRlJTIwYWdlbnR8ZW58MXx8fHwxNzYwNDI2MjAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      bio: "Expert in premium property transactions"
-    },
-    {
-      name: "Ahmed Hassan",
-      role: "Senior Property Consultant",
-      image: "https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBtZWV0aW5nfGVufDF8fHx8MTc2MDQwNjYxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      bio: "Specialized in waterfront properties"
-    },
-    {
-      name: "Fatima Al Zaabi",
-      role: "Marketing Director",
-      image: "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0JTIwdGVhbXxlbnwxfHx8fDE3NjA0MjYyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      bio: "Digital marketing and brand strategy expert"
-    }
-  ];
+  // const teamMembers = [
+  //   {
+  //     name: "Mohammed Al Mansouri",
+  //     role: "CEO & Founder",
+  //     image: "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0JTIwdGVhbXxlbnwxfHx8fDE3NjA0MjYyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  //     bio: "15+ years of experience in luxury real estate"
+  //   },
+  //   {
+  //     name: "Sarah Johnson",
+  //     role: "Head of Sales",
+  //     image: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZWFsJTIwZXN0YXRlJTIwYWdlbnR8ZW58MXx8fHwxNzYwNDI2MjAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+  //     bio: "Expert in premium property transactions"
+  //   },
+  //   {
+  //     name: "Ahmed Hassan",
+  //     role: "Senior Property Consultant",
+  //     image: "https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBtZWV0aW5nfGVufDF8fHx8MTc2MDQwNjYxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+  //     bio: "Specialized in waterfront properties"
+  //   },
+  //   {
+  //     name: "Fatima Al Zaabi",
+  //     role: "Marketing Director",
+  //     image: "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0JTIwdGVhbXxlbnwxfHx8fDE3NjA0MjYyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  //     bio: "Digital marketing and brand strategy expert"
+  //   }
+  // ];
 
   const achievements = [
-    { icon: Award, title: "Best Real Estate Agency 2024", description: "Dubai Property Awards" },
-    { icon: Users, title: "1200+ Happy Clients", description: "Trusted by families across UAE" },
-    { icon: TrendingUp, title: "AED 2B+ in Sales", description: "Total property transactions" },
-    { icon: Target, title: "100% Success Rate", description: "Client satisfaction guarantee" }
+    { icon: Award, title: "Certified Excellence", description: "RERA registered and compliant real estate services" },
+    { icon: Users, title: "Client-Focused Approach", description: "Personalized service for every property journey" },
+    { icon: TrendingUp, title: "Market Expertise", description: "Deep knowledge of UAE property market trends" },
+    { icon: Target, title: "Proven Track Record", description: "Successful transactions across Dubai's prime locations" }
   ];
 
   const values = [
@@ -99,15 +99,15 @@ export function About() {
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-accent/90 to-accent/70 z-10" />
         <motion.div
-          initial={{ scale: 1.2, opacity: 0 }}
+          initial={{ scale: 1.2, opacity: 0.5 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1 }}
           className="absolute inset-0"
         >
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzNDcwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="About AHK Solution"
-            className="w-full h-full object-cover opacity-30"
+            alt="About rhk Properties LLC"
+            className="w-full h-full object-cover opacity-100"
           />
         </motion.div>
         <div className="container mx-auto px-4 lg:px-8 z-20 text-white text-center">
@@ -116,7 +116,7 @@ export function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl mb-4">About AHK Solution</h1>
+            <h1 className="text-4xl md:text-6xl mb-4">About rhk Properties LLC</h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Your trusted partner in luxury real estate since 2010
             </p>
@@ -137,7 +137,7 @@ export function About() {
               <h2 className="mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2010, AHK Solution has grown to become one of Dubai's most trusted and respected real estate agencies. Our journey began with a simple yet powerful vision: to help people find their dream homes in one of the world's most dynamic cities.
+                  Founded in 2010, rhk Properties LLC has grown to become one of Dubai's most trusted and respected real estate agencies. Our journey began with a simple yet powerful vision: to help people find their dream homes in one of the world's most dynamic cities.
                 </p>
                 <p>
                   Over the years, we have built a reputation for excellence, integrity, and personalized service. Our team of experienced professionals brings together decades of combined expertise in the UAE real estate market, with deep knowledge of every neighborhood, development, and investment opportunity.
@@ -392,7 +392,7 @@ export function About() {
       </section>
 
       {/* Team */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div 
             className="text-center mb-12"
@@ -439,7 +439,7 @@ export function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-accent to-accent/80 text-white">

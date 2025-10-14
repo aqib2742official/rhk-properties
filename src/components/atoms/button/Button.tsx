@@ -34,12 +34,12 @@ const SIZE_CLASSES = {
 } as const;
 
 const VARIANT_CLASSES = {
-  primary: "bg-brand-500 text-white shadow-theme-xs hover:bg-brand-600 focus:ring-brand-500/20",
-  secondary: "bg-gray-100 text-gray-700 shadow-theme-xs hover:bg-gray-200 focus:ring-gray-500/20 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700",
-  outline: "bg-transparent text-gray-700 border border-gray-300 shadow-theme-xs hover:bg-gray-50 focus:ring-gray-500/20 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-800",
-  ghost: "bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500/20 dark:text-gray-300 dark:hover:bg-gray-800",
-  danger: "bg-error-500 text-white shadow-theme-xs hover:bg-error-600 focus:ring-error-500/20",
-  success: "bg-success-500 text-white shadow-theme-xs hover:bg-success-600 focus:ring-success-500/20",
+  primary: "bg-accent text-accent-foreground shadow-lg hover:bg-accent/90 focus:ring-accent/20",
+  secondary: "bg-secondary text-secondary-foreground shadow-md hover:bg-secondary/80 focus:ring-accent/20",
+  outline: "bg-transparent text-foreground border border-gray-300 shadow-sm hover:bg-secondary focus:ring-accent/20 dark:border-gray-600",
+  ghost: "bg-transparent text-foreground hover:bg-secondary focus:ring-accent/20",
+  danger: "bg-red-600 text-white shadow-lg hover:bg-red-700 focus:ring-red-500/20",
+  success: "bg-green-600 text-white shadow-lg hover:bg-green-700 focus:ring-green-500/20",
 } as const;
 
 const SPINNER_SIZES = {

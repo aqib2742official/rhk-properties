@@ -1,12 +1,12 @@
 'use client';
 
-import { Bed, Bath, Maximize, MapPin } from "lucide-react";
-import Link from "next/link";
+// import { Bed, Bath, Maximize, MapPin } from "lucide-react";
+// import Link from "next/link";
 import { motion } from "motion/react";
 import { Property } from "../data/properties";
-import { Card, CardContent } from "./ui/card";
+import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface PropertyCardProps {
@@ -14,9 +14,9 @@ interface PropertyCardProps {
 }
 
 export function PropertyCard({ property }: PropertyCardProps) {
-  const formatPrice = (price: number) => {
-    return `AED ${(price / 1000000).toFixed(2)}M`;
-  };
+  // const formatPrice = (price: number) => {
+  //   return `AED ${(price / 1000000).toFixed(2)}M`;
+  // };
 
   return (
     <motion.div
@@ -28,7 +28,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
       className="h-full"
     >
       <Card className="group overflow-hidden h-full flex flex-col">
-      <div className="relative w-full overflow-hidden" style={{ paddingBottom: '75%' }}>
+      <div className="relative w-full overflow-hidden" style={{ paddingBottom: '85%' }}>
         <div className="absolute inset-0">
           <ImageWithFallback
             src={property.image}
@@ -47,7 +47,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
         </div>
       </div>
 
-      <CardContent className="p-5 flex flex-col flex-1">
+      {/* <CardContent className="p-5 flex flex-col flex-1">
         <div className="mb-3 flex-1">
           <p className="text-muted-foreground flex items-center gap-1 mb-1">
             <MapPin className="h-4 w-4 flex-shrink-0" />
@@ -82,7 +82,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
             <Link href={`/properties/${property.id}`}>View Details</Link>
           </Button>
         </div>
-      </CardContent>
+      </CardContent> */}
     </Card>
     </motion.div>
   );

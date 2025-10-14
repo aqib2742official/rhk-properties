@@ -10,7 +10,7 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function Blog() {
   return (
-    <div className="w-full py-16">
+    <div className="w-full py-6">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -26,25 +26,25 @@ export function Blog() {
             <div className="grid md:grid-cols-2 gap-0">
               <div className="aspect-[4/3] md:aspect-auto">
                 <ImageWithFallback
-                  src={blogPosts[0].image}
-                  alt={blogPosts[0].title}
-                  className="w-full h-full object-cover"
+                  src={blogPosts[blogPosts.length - 1].image}
+                  alt={blogPosts[blogPosts.length - 1].title}
+                  className="w-full max-h-[300px] object-cover"
                 />
               </div>
               <CardContent className="p-8 flex flex-col justify-center">
                 <Badge className="w-fit mb-3 bg-accent text-accent-foreground">
-                  {blogPosts[0].category}
+                  {blogPosts[blogPosts.length - 1].category}
                 </Badge>
-                <h2 className="mb-3">{blogPosts[0].title}</h2>
-                <p className="text-muted-foreground mb-4">{blogPosts[0].excerpt}</p>
+                <h2 className="mb-3">{blogPosts[blogPosts.length - 1].title}</h2>
+                <p className="text-muted-foreground mb-4">{blogPosts[blogPosts.length - 1].excerpt}</p>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
                   <div className="flex items-center gap-1">
                     <User className="h-4 w-4" />
-                    <span>{blogPosts[0].author}</span>
+                    <span>{blogPosts[blogPosts.length - 1].author}</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Calendar className="h-4 w-4" />
-                    <span>{new Date(blogPosts[0].date).toLocaleDateString('en-US', { 
+                    <span>{new Date(blogPosts[blogPosts.length - 1].date).toLocaleDateString('en-US', { 
                       year: 'numeric', 
                       month: 'long', 
                       day: 'numeric' 
@@ -55,7 +55,7 @@ export function Blog() {
                   className="w-fit bg-accent text-accent-foreground hover:bg-accent/90"
                   asChild
                 >
-                  <Link href={`/blog/${blogPosts[0].id}`}>
+                  <Link href={`/blog/${blogPosts[blogPosts.length - 1].id}`}>
                     Read More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -66,7 +66,7 @@ export function Blog() {
         )}
 
         {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
           {blogPosts.slice(1).map((post) => (
             <Card key={post.id} className="group overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: '75%' }}>

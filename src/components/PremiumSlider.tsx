@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 
 interface Slide {
@@ -15,31 +15,31 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1574213183659-c3b6df87d99f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBkdWJhaSUyMHBlbnRob3VzZSUyMGludGVyaW9yfGVufDF8fHx8MTc2MDQyNjEyOXww&ixlib=rb-4.1.0&q=80&w=1080",
-    title: "Luxury Penthouses",
-    subtitle: "Premium Downtown Living",
-    description: "Experience unparalleled luxury in Dubai's most prestigious locations"
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
+    title: "Premium Property Portfolio",
+    subtitle: "Curated Luxury Real Estate in UAE",
+    description: "Discover our exclusive collection of high-end properties across Dubai's most prestigious locations"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1721170627991-78447ce43637?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkdWJhaSUyMGFwYXJ0bWVudCUyMGJhbGNvbnklMjB2aWV3fGVufDF8fHx8MTc2MDQyNjEzMHww&ixlib=rb-4.1.0&q=80&w=1080",
-    title: "Sky-High Views",
-    subtitle: "Breathtaking Panoramas",
-    description: "Wake up to stunning views of Dubai's iconic skyline every day"
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80",
+    title: "Expert Real Estate Services",
+    subtitle: "Your Trusted Property Partner",
+    description: "Comprehensive buying, selling, and investment advisory services tailored to your goals"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1735320865438-2dda05da6d04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB2aWxsYSUyMHBvb2wlMjBkdWJhaXxlbnwxfHx8fDE3NjA0MTkwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    title: "Private Villas",
-    subtitle: "Exclusive Waterfront Estates",
-    description: "Indulge in privacy and sophistication with your own paradise"
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&q=80",
+    title: "Prime Locations Portfolio",
+    subtitle: "Dubai Marina • Downtown • Palm Jumeirah",
+    description: "Exclusive access to properties in Dubai's most sought-after neighborhoods and developments"
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1690623837469-611f752ca00a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkdWJhaSUyMG1hcmluYSUyMGx1eHVyeSUyMHByb3BlcnR5fGVufDF8fHx8MTc2MDQyNjEzMHww&ixlib=rb-4.1.0&q=80&w=1080",
-    title: "Marina Living",
-    subtitle: "Waterfront Elegance",
-    description: "Live the yacht lifestyle with prestigious marina properties"
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80",
+    title: "Investment Opportunities",
+    subtitle: "Maximizing Your Real Estate Returns",
+    description: "Strategic property investments with proven track record of exceptional yields and capital appreciation"
   }
 ];
 
@@ -135,7 +135,7 @@ export function PremiumSlider() {
                   transition={{ delay: 0.5, duration: 0.6 }}
                   className="inline-block mb-4 px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full border border-accent/30"
                 >
-                  <span className="text-accent">{slides[currentIndex].subtitle}</span>
+                  <span className="text-[#1E2370]">{slides[currentIndex].subtitle}</span>
                 </motion.div>
 
                 <motion.h2
@@ -162,11 +162,11 @@ export function PremiumSlider() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1, duration: 0.5 }}
                 >
-                  <Link href="/properties">
+                  {/* <Link href="/properties">
                     <button className="px-8 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 hover:scale-105 transition-all">
                       Explore Properties
                     </button>
-                  </Link>
+                  </Link> */}
                 </motion.div>
               </motion.div>
             </div>

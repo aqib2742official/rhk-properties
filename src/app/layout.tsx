@@ -9,7 +9,7 @@ import '@/index.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'AHK Solution - Luxury Real Estate Dubai',
+  title: 'rhk Properties LLC - Luxury Real Estate Dubai',
   description: 'Your trusted partner in luxury real estate across the UAE. Delivering exceptional properties and unmatched service.',
 };
 
