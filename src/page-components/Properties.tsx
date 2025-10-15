@@ -27,19 +27,19 @@ export function Properties() {
   };
 
   return (
-    <div className="w-full py-16">
+    <div className="w-full py-8 md:py-12 lg:py-16 overflow-x-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="mb-4">Our Properties</h1>
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="mb-4 text-2xl md:text-4xl lg:text-5xl">Our Properties</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Browse our extensive collection of luxury properties across Dubai and the UAE
           </p>
         </div>
 
         {/* Filters */}
-        <div className="bg-secondary rounded-lg p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="bg-secondary rounded-lg p-4 md:p-6 mb-6 md:mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm mb-2">Property Type</label>
               <Select value={filterType} onValueChange={setFilterType}>
@@ -86,7 +86,7 @@ export function Properties() {
               </Select>
             </div>
 
-            <div className="flex items-end">
+            <div className="flex items-end sm:col-span-2 lg:col-span-1">
               <Button 
                 variant="outline" 
                 onClick={resetFilters}

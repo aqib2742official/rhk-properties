@@ -78,20 +78,20 @@ export function Contact() {
   };
 
   return (
-    <div className="w-full py-10 lg:px-32">
+    <div className="w-full py-8 md:py-10 lg:px-20 overflow-x-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-10">
-          <h1 className="mb-2 text-4xl font-semibold text-gray-900 dark:text-gray-100">Contact Us</h1>
+        <div className="text-center mb-8 md:mb-10">
+          <h1 className="mb-2 text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100">Contact Us</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
             Get in touch with our team. We're here to help you find your perfect property in UAE.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 flex flex-col lg:flex-row justify-between items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Information */}
           <div>
-            <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-gray-100">Get In Touch</h2>
+            <h2 className="mb-4 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100">Get In Touch</h2>
             <p className="text-muted-foreground mb-6 text-sm">
               Whether you're looking to buy, sell, or invest in Dubai real estate, our expert team is ready to assist you. Reach out to us through any of the channels below.
             </p>
@@ -164,8 +164,8 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card rounded-xl p-5 dark:bg-gray-800  border border-gray-200 dark:border-gray-700">
-            <h2 className="mb-5 text-2xl font-semibold text-gray-900 dark:text-gray-100">Send us a Message</h2>
+          <div className="bg-card rounded-xl p-4 md:p-5 dark:bg-gray-800  border border-gray-200 dark:border-gray-700">
+            <h2 className="mb-4 md:mb-5 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100">Send us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-2">
               <InputField
                 label="Full Name"
@@ -240,11 +240,11 @@ export function Contact() {
           </div>
         </div>
         {/* Map Placeholder */}
-        <div className="mt-16">
-          <div className="bg-secondary rounded-xl h-96 flex items-center justify-center dark:bg-gray-800  border border-gray-200 dark:border-gray-700">
-            <div className="text-center text-muted-foreground text-sm">
-              <MapPin className="h-16 w-16 mx-auto mb-4 text-accent" />
-              <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100">Office Location Map</h3>
+        <div className="mt-12 md:mt-16">
+          <div className="bg-secondary rounded-xl h-64 md:h-80 lg:h-96 flex items-center justify-center dark:bg-gray-800  border border-gray-200 dark:border-gray-700">
+            <div className="text-center text-muted-foreground text-sm px-4">
+              <MapPin className="h-12 w-12 md:h-16 md:w-16 mx-auto mb-4 text-accent" />
+              <h3 className="mb-2 text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100">Office Location Map</h3>
               <p>Prime Tower, Business Bay, Dubai</p>
               <p className="text-xs mt-2">Google Maps integration available</p>
             </div>

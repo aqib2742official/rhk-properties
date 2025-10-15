@@ -8,7 +8,7 @@ import logoDark from "@/assets/rhk-properties-dark.svg";
 
 export function Footer() {
   const { theme } = useTheme();
-  
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 lg:px-8 py-12">
@@ -16,9 +16,9 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src={theme === 'dark' ? logoLight.src : logoDark.src} 
-                alt="rhk Properties LLC" 
+              <img
+                src={theme === 'dark' ? logoLight.src : logoDark.src}
+                alt="rhk Properties LLC"
                 className="h-10 w-auto"
               />
             </div>

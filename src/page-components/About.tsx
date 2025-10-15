@@ -94,9 +94,9 @@ export function About() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-accent/90 to-accent/70 z-10" />
         <motion.div
           initial={{ scale: 1.2, opacity: 0.5 }}
@@ -116,8 +116,8 @@ export function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl mb-4">About rhk Properties LLC</h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl mb-4 px-2">About rhk Properties LLC</h1>
+            <p className="text-base md:text-xl text-white/90 max-w-2xl mx-auto px-2">
               Your trusted partner in luxury real estate since 2010
             </p>
           </motion.div>
@@ -125,16 +125,16 @@ export function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="mb-6">Our Story</h2>
+              <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Founded in 2010, rhk Properties LLC has grown to become one of Dubai's most trusted and respected real estate agencies. Our journey began with a simple yet powerful vision: to help people find their dream homes in one of the world's most dynamic cities.
@@ -150,8 +150,8 @@ export function About() {
                 </p>
               </div>
             </motion.div>
-            <motion.div 
-              className="relative h-[500px] rounded-lg overflow-hidden"
+            <motion.div
+              className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden"
               initial={{ opacity: 0, x: 50, rotateY: -20 }}
               whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
               viewport={{ once: true }}
@@ -169,16 +169,16 @@ export function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-secondary">
+      <section className="py-12 md:py-20 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
+          <motion.div
+            className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">Our Core Values</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Our Core Values</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
@@ -194,7 +194,7 @@ export function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.05 }}
               >
-                <motion.div 
+                <motion.div
                   className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center mb-4"
                   whileHover={{ rotate: 360, scale: 1.2 }}
                   transition={{ duration: 0.6 }}
@@ -210,11 +210,11 @@ export function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div 
-              className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg p-8 border border-accent/20"
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            <motion.div
+              className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg p-6 md:p-8 border border-accent/20"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -224,7 +224,7 @@ export function About() {
               <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center mb-4">
                 <Target className="h-6 w-6 text-accent" />
               </div>
-              <h2 className="mb-4">Our Mission</h2>
+              <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl">Our Mission</h2>
               <p className="text-muted-foreground mb-4">
                 To provide exceptional real estate services that exceed our clients' expectations, helping them make informed decisions and achieve their property goals with confidence and ease.
               </p>
@@ -232,8 +232,8 @@ export function About() {
                 We are committed to delivering personalized service, expert market knowledge, and innovative solutions that make the property buying, selling, and investing process seamless and rewarding.
               </p>
             </motion.div>
-            <motion.div 
-              className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg p-8 border border-accent/20"
+            <motion.div
+              className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-lg p-6 md:p-8 border border-accent/20"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -243,7 +243,7 @@ export function About() {
               <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center mb-4">
                 <TrendingUp className="h-6 w-6 text-accent" />
               </div>
-              <h2 className="mb-4">Our Vision</h2>
+              <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl">Our Vision</h2>
               <p className="text-muted-foreground mb-4">
                 To be the most trusted and innovative real estate company in the UAE, recognized for our integrity, expertise, and commitment to delivering outstanding results for our clients.
               </p>
@@ -256,48 +256,70 @@ export function About() {
       </section>
 
       {/* Milestones Timeline */}
-      <section className="py-20 bg-secondary">
+      <section className="py-12 md:py-20 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
+          <motion.div
+            className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">Our Journey</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Our Journey</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Key milestones that shaped our success story
             </p>
           </motion.div>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-accent/20" />
-            <div className="space-y-12">
+          <div className="relative max-w-4xl mx-auto">
+            {/* Timeline line - hidden on mobile, visible on desktop */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-accent/20" />
+            {/* Mobile timeline line - on the left */}
+            <div className="md:hidden absolute left-4 top-0 h-full w-0.5 bg-accent/20" />
+            
+            <div className="space-y-8 md:space-y-12">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={index}
-                  className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+                  className={`flex items-center gap-4 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
-                  <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                  {/* Mobile layout */}
+                  <motion.div
+                    className="w-4 h-4 flex-shrink-0 rounded-full bg-accent border-4 border-background z-10 md:hidden"
+                    whileHover={{ scale: 2 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <div className="flex-1 md:hidden">
                     <motion.div
-                      className="bg-background rounded-lg p-6 inline-block"
+                      className="bg-background rounded-lg p-4 md:p-6 w-full"
+                      whileHover={{ scale: 1.02, boxShadow: "0 10px 30px rgba(0,102,255,0.15)" }}
+                    >
+                      <div className="text-accent mb-2 font-semibold">{milestone.year}</div>
+                      <h3 className="mb-2 text-lg">{milestone.title}</h3>
+                      <p className="text-sm text-muted-foreground">{milestone.description}</p>
+                    </motion.div>
+                  </div>
+
+                  {/* Desktop layout */}
+                  <div className={`hidden md:flex md:flex-1 ${index % 2 === 0 ? 'md:justify-end text-right' : 'md:justify-start text-left'}`}>
+                    <motion.div
+                      className="bg-background rounded-lg p-6 max-w-md"
                       whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,102,255,0.15)" }}
                     >
-                      <div className="text-accent mb-2">{milestone.year}</div>
+                      <div className="text-accent mb-2 font-semibold">{milestone.year}</div>
                       <h3 className="mb-2">{milestone.title}</h3>
                       <p className="text-sm text-muted-foreground">{milestone.description}</p>
                     </motion.div>
                   </div>
-                  <motion.div 
-                    className="w-4 h-4 rounded-full bg-accent border-4 border-background z-10"
+                  <motion.div
+                    className="hidden md:block w-4 h-4 flex-shrink-0 rounded-full bg-accent border-4 border-background z-10"
                     whileHover={{ scale: 2 }}
                     transition={{ duration: 0.3 }}
                   />
-                  <div className="flex-1" />
+                  <div className="hidden md:block md:flex-1" />
                 </motion.div>
               ))}
             </div>
@@ -306,16 +328,16 @@ export function About() {
       </section>
 
       {/* Services */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
+          <motion.div
+            className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">Our Services</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Our Services</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Comprehensive real estate solutions tailored to your needs
             </p>
@@ -331,7 +353,7 @@ export function About() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.05 }}
               >
-                <motion.div 
+                <motion.div
                   className="flex justify-center mb-4"
                   whileHover={{ rotateY: 360 }}
                   transition={{ duration: 0.6 }}
@@ -351,7 +373,7 @@ export function About() {
       {/* Achievements */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -365,8 +387,8 @@ export function About() {
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {achievements.map((achievement, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="bg-background rounded-lg p-6 text-center"
                 initial={{ opacity: 0, y: 50, rotateY: -20 }}
                 whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
@@ -375,7 +397,7 @@ export function About() {
                 whileHover={{ scale: 1.05, y: -10 }}
               >
                 <div className="flex justify-center mb-4">
-                  <motion.div 
+                  <motion.div
                     className="h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center"
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.6 }}
@@ -442,7 +464,7 @@ export function About() {
       </section> */}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-accent to-accent/80 text-white">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-accent to-accent/80 text-white">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -450,13 +472,13 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="mb-4">Ready to Work With Us?</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Ready to Work With Us?</h2>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto">
               Let our expert team guide you through your real estate journey with professionalism and care
             </p>
             <Link href="/contact">
               <motion.button
-                className="inline-block px-8 py-4 bg-white text-accent rounded-lg hover:bg-white/90 transition-colors cursor-pointer"
+                className="inline-block px-6 py-3 md:px-8 md:py-4 bg-white text-accent rounded-lg hover:bg-white/90 transition-colors cursor-pointer text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

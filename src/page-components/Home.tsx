@@ -13,12 +13,12 @@ export function Home() {
   const featuredProperties = properties.filter(p => p.status === "Available").slice(0, 4);
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Premium Hero Slider */}
       <PremiumSlider />
 
       {/* Why Choose Us Section */}
-      <section className="py-12 bg-secondary">
+      <section className="py-8 md:py-12 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div 
@@ -97,15 +97,15 @@ export function Home() {
       </section>
 
       {/* Featured Properties */}
-      <section className="py-8">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Featured Properties</h2>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Featured Properties</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Explore our handpicked selection of premium properties in Dubai's most sought-after locations
             </p>
           </div>
-          <div className="px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 auto-rows-fr">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 auto-rows-fr">
             {featuredProperties.map((property) => (
               <PropertyCard
                 key={property.id}
@@ -130,11 +130,11 @@ export function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="mb-6 text-2xl">Why Choose rhk Properties LLC</h2>
+              <h2 className="mb-6 text-xl md:text-2xl lg:text-3xl">Why Choose rhk Properties LLC</h2>
               <div className="space-y-3">
                 <div className="flex gap-3">
                   <div className="flex-shrink-0">
@@ -190,7 +190,7 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
+            <div className="relative h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzNDcwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Prime Estates Office"
@@ -202,21 +202,21 @@ export function Home() {
       </section>
 
       {/* Neighborhoods Section */}
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div 
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">Explore Premium Neighborhoods</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Explore Premium Neighborhoods</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Discover Dubai's most prestigious locations
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 name: "Downtown Dubai",
@@ -236,7 +236,7 @@ export function Home() {
             ].map((neighborhood, index) => (
               <div key={index}>
                 <motion.div
-                  className="relative h-80 rounded-lg overflow-hidden group"
+                  className="relative h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden group"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -261,21 +261,21 @@ export function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div 
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">How It Works</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">How It Works</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Your journey to finding the perfect property in 4 simple steps
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               {
                 step: "01",
@@ -389,7 +389,7 @@ export function Home() {
       </section> */}
 
       {/* CTA Section */}
-      <section className="py-16 bg-accent text-accent-foreground">
+      <section className="py-12 md:py-16 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -397,7 +397,7 @@ export function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">Ready to Find Your Perfect Property?</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Ready to Find Your Perfect Property?</h2>
             <p className="text-accent-foreground/90 mb-8 max-w-2xl mx-auto">
               Let our expert team help you discover the ideal home or investment opportunity in Dubai
             </p>

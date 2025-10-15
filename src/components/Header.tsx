@@ -36,9 +36,9 @@ export function Header() {
             href="/"
             className="flex items-center space-x-3 transition-opacity hover:opacity-80"
           >
-            <img 
-              src={theme === 'light' ? logoLight.src : logoDark.src} 
-              alt="rhk Properties LLC" 
+            <img
+              src={theme === 'light' ? logoLight.src : logoDark.src}
+              alt="rhk Properties LLC"
               className="h-12 w-auto"
             />
           </Link>
@@ -55,7 +55,7 @@ export function Header() {
                 <Link href={item.path}>{item.label}</Link>
               </Button>
             ))}
-            
+
             {/* Theme Toggle */}
             <Button
               variant="ghost"
@@ -102,11 +102,10 @@ export function Header() {
                 key={item.id}
                 href={item.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block w-full text-left px-4 py-3 rounded transition-colors ${
-                  isActive(item.path)
+                className={`block w-full text-left px-4 py-3 rounded transition-colors ${isActive(item.path)
                     ? "bg-accent text-accent-foreground"
                     : "hover:bg-secondary"
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>

@@ -86,7 +86,7 @@ export function PremiumSlider() {
   };
 
   return (
-    <div className="relative w-full h-[700px] overflow-hidden bg-black">
+    <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden bg-black">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}
@@ -142,7 +142,7 @@ export function PremiumSlider() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6, duration: 0.7 }}
-                  className="text-5xl md:text-6xl lg:text-7xl text-white mb-6"
+                  className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 md:mb-6"
                   style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}
                 >
                   {slides[currentIndex].title}
@@ -152,7 +152,7 @@ export function PremiumSlider() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
-                  className="text-xl text-white/90 mb-8"
+                  className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8"
                 >
                   {slides[currentIndex].description}
                 </motion.p>
