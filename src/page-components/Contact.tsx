@@ -106,8 +106,8 @@ export function Contact() {
                 <div>
                   <h3 className="mb-1 text-base font-semibold">Our Office</h3>
                   <p className="text-muted-foreground text-sm">
-                    Prime Tower, Business Bay<br />
-                    Dubai, United Arab Emirates
+                    Office 2304 Prime Tower, Burj Khalifa Blvd<br />
+                    Business Bay, Dubai, UAE
                   </p>
                 </div>
               </div>
@@ -121,8 +121,7 @@ export function Contact() {
                 <div>
                   <h3 className="mb-1 text-base font-semibold">Phone</h3>
                   <p className="text-muted-foreground text-sm">
-                    +971 4 XXX XXXX<br />
-                    +971 50 XXX XXXX (WhatsApp)
+                    +971 4 589 0333
                   </p>
                 </div>
               </div>
@@ -136,8 +135,7 @@ export function Contact() {
                 <div>
                   <h3 className="mb-1 text-base font-semibold">Email</h3>
                   <p className="text-muted-foreground text-sm">
-                    info@rhkproperties.ae<br />
-                    sales@rhkproperties.ae
+                    info@rhkproperties.com
                   </p>
                 </div>
               </div>
@@ -148,16 +146,12 @@ export function Contact() {
               <h3 className="mb-3 text-base font-semibold">Office Hours</h3>
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Monday - Friday</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
+                  <span className="text-muted-foreground">Sunday - Thursday</span>
+                  <span className="font-medium">9:00 - 18:00 (UAE)</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Saturday</span>
-                  <span className="font-medium">10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Sunday</span>
-                  <span className="font-medium">Closed</span>
+                  <span className="text-muted-foreground">Friday - Saturday</span>
+                  <span className="font-medium">By appointment</span>
                 </div>
               </div>
             </div>
@@ -166,6 +160,9 @@ export function Contact() {
           {/* Contact Form */}
           <div className="bg-card rounded-xl p-4 md:p-5 dark:bg-gray-800  border border-gray-200 dark:border-gray-700">
             <h2 className="mb-4 md:mb-5 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100">Send us a Message</h2>
+            <p className="text-xs text-muted-foreground mb-4">
+              We'll use your details only to respond to your inquiry. Tell us your budget, area, and timing—we'll tailor recommendations to fit.
+            </p>
             <form onSubmit={handleSubmit} className="space-y-2">
               <InputField
                 label="Full Name"
@@ -244,8 +241,9 @@ export function Contact() {
           <div className="bg-secondary rounded-xl h-64 md:h-80 lg:h-96 flex items-center justify-center dark:bg-gray-800  border border-gray-200 dark:border-gray-700">
             <div className="text-center text-muted-foreground text-sm px-4">
               <MapPin className="h-12 w-12 md:h-16 md:w-16 mx-auto mb-4 text-accent" />
-              <h3 className="mb-2 text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100">Office Location Map</h3>
-              <p>Prime Tower, Business Bay, Dubai</p>
+              <h3 className="mb-2 text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100">Find Us Here</h3>
+              <p>Office 2304 Prime Tower, Burj Khalifa Blvd</p>
+              <p>Business Bay, Dubai, UAE</p>
               <p className="text-xs mt-2">Google Maps integration available</p>
             </div>
           </div>

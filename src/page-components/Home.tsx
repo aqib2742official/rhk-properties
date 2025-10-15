@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Award, Building2, CheckCircle2, Users } from "lucide-react";
+import { ArrowRight, Building2, CheckCircle2, Users, TrendingUp, Clock, Shield, FileCheck } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Button } from "../components/ui/button";
@@ -17,80 +17,93 @@ export function Home() {
       {/* Premium Hero Slider */}
       <PremiumSlider />
 
-      {/* Why Choose Us Section */}
+      {/* Hero Highlights Section */}
       <section className="py-8 md:py-12 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div 
+          {/* Trust Strip */}
+          <motion.div
+            className="text-center mb-8 md:mb-10"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-block px-4 py-2 bg-accent/10 rounded-full">
+              <span className="text-accent text-sm font-semibold">RERA-aligned • Trakheesi-ready • EN/AR • Privacy-first</span>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 50, rotateX: -20 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <motion.div 
+              <motion.div
                 className="flex justify-center mb-4"
                 whileHover={{ scale: 1.2, rotateY: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <Building2 className="h-12 w-12 text-accent" />
+                <TrendingUp className="h-12 w-12 text-accent" />
               </motion.div>
-              <h3 className="text-lg font-semibold mb-2">Expert Market Knowledge</h3>
-              <p className="text-muted-foreground text-md">Deep understanding of Dubai's real estate landscape</p>
+              <h3 className="text-lg font-semibold mb-2">Live Status Tracking</h3>
+              <p className="text-muted-foreground text-sm">KYC → Form A → permit → media → viewings → offers → closing—see progress in real time</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 50, rotateX: -20 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <motion.div 
+              <motion.div
                 className="flex justify-center mb-4"
                 whileHover={{ scale: 1.2, rotateY: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <Users className="h-12 w-12 text-accent" />
+                <Clock className="h-12 w-12 text-accent" />
               </motion.div>
-              <h3 className="text-lg font-semibold mb-2">Client-First Approach</h3>
-              <p className="text-muted-foreground text-md">Personalized service tailored to your unique needs</p>
+              <h3 className="text-lg font-semibold mb-2">5-Minute Response Promise</h3>
+              <p className="text-muted-foreground text-sm">New inquiries get a fast, helpful reply backed by an expert support team</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 50, rotateX: -20 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <motion.div 
+              <motion.div
                 className="flex justify-center mb-4"
                 whileHover={{ scale: 1.2, rotateY: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                <Award className="h-12 w-12 text-accent" />
+                <Shield className="h-12 w-12 text-accent" />
               </motion.div>
-              <h3 className="text-lg font-semibold mb-2">Premium Properties</h3>
-              <p className="text-muted-foreground text-md">Curated selection of luxury real estate across UAE</p>
+              <h3 className="text-lg font-semibold mb-2">Compliance Built-In</h3>
+              <p className="text-muted-foreground text-sm">Trakheesi-aligned advertising, bilingual contracts, secure e-signing, auditable records</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 50, rotateX: -20 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <motion.div 
+              <motion.div
                 className="flex justify-center mb-4"
                 whileHover={{ scale: 1.2, rotateY: 360 }}
                 transition={{ duration: 0.6 }}
               >
                 <CheckCircle2 className="h-12 w-12 text-accent" />
               </motion.div>
-              <h3 className="text-lg font-semibold mb-2">Seamless Transactions</h3>
-              <p className="text-muted-foreground text-md">End-to-end support from viewing to ownership</p>
+              <h3 className="text-lg font-semibold mb-2">Seamless Closing</h3>
+              <p className="text-muted-foreground text-sm">We coordinate NOC, clearances, Trustee appointment, transfer, and handover</p>
             </motion.div>
           </div>
         </div>
@@ -99,12 +112,26 @@ export function Home() {
       {/* Featured Properties */}
       <section className="py-8 md:py-12">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Featured Properties</h2>
+          {/* <div className="text-center mb-8 md:mb-12">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Premium Property Portfolio</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our handpicked selection of premium properties in Dubai's most sought-after locations
+              We curate a select portfolio of villas, penthouses, and apartments across Dubai's flagship neighborhoods.
+              Expect verified details, true-to-life media, and clean, consistent presentation—so decisions are easy and informed.
             </p>
-          </div>
+          </div> */}
+          <motion.div
+            className="text-center max-w-3xl mx-auto mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Premium Property Portfolio</h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              We curate a select portfolio of villas, penthouses, and apartments across Dubai's flagship neighborhoods.
+              Expect verified details, true-to-life media, and clean, consistent presentation—so decisions are easy and informed.
+            </p>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 auto-rows-fr">
             {featuredProperties.map((property) => (
               <PropertyCard
@@ -134,57 +161,57 @@ export function Home() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="mb-6 text-xl md:text-2xl lg:text-3xl">Why Choose rhk Properties LLC</h2>
-              <div className="space-y-3">
+              <h2 className="mb-6 text-xl md:text-2xl lg:text-3xl">Why Choose Us</h2>
+              <div className="space-y-4">
                 <div className="flex gap-3">
                   <div className="flex-shrink-0">
                     <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent" />
+                      <Users className="h-5 w-5 text-accent" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="mb-2 font-semibold text-2xl">Expert Guidance</h3>
-                    <p className="text-muted-foreground text-md">
-                      Our experienced team provides personalized service and expert advice throughout your property journey.
+                    <h3 className="mb-2 font-semibold text-lg">Expert Guidance</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Dedicated advisors who tune the search to your lifestyle and goals.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <div className="flex-shrink-0">
                     <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent" />
+                      <Building2 className="h-5 w-5 text-accent" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="mb-2 font-semibold text-2xl">Prime Locations</h3>
-                    <p className="text-muted-foreground text-md">
-                      Access to exclusive properties in Dubai's most prestigious and desirable neighborhoods.
+                    <h3 className="mb-2 font-semibold text-lg">Prime Locations</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Access to sought-after homes in prestigious communities.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <div className="flex-shrink-0">
                     <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent" />
+                      <FileCheck className="h-5 w-5 text-accent" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="mb-2 font-semibold text-2xl">Transparent Process</h3>
-                    <p className="text-muted-foreground text-md">
-                      Clear communication and transparent processes ensure a smooth and stress-free experience.
+                    <h3 className="mb-2 font-semibold text-lg">Transparent Process</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Clear steps, proactive updates, honest timelines.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <div className="flex-shrink-0">
                     <div className="h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center">
-                      <CheckCircle2 className="h-5 w-5 text-accent" />
+                      <TrendingUp className="h-5 w-5 text-accent" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="mb-2 font-semibold text-2xl">Investment Expertise</h3>
-                    <p className="text-muted-foreground text-md">
-                      Strategic insights and market analysis to maximize your real estate investment returns.
+                    <h3 className="mb-2 font-semibold text-lg">Investor Mindset</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Market context that helps you protect value and capture upside.
                     </p>
                   </div>
                 </div>
@@ -193,7 +220,7 @@ export function Home() {
             <div className="relative h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzNDcwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Prime Estates Office"
+                alt="rhk Properties LLC Office"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -204,7 +231,7 @@ export function Home() {
       {/* Neighborhoods Section */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -243,17 +270,17 @@ export function Home() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ scale: 1.03 }}
                 >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
-                <ImageWithFallback
-                  src={neighborhood.image}
-                  alt={neighborhood.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 text-white">
-                  <h3 className="text-white mb-2">{neighborhood.name}</h3>
-                  <p className="text-white/80 text-sm">{neighborhood.properties}</p>
-                </div>
-              </motion.div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
+                  <ImageWithFallback
+                    src={neighborhood.image}
+                    alt={neighborhood.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-20 text-white">
+                    <h3 className="text-white mb-2">{neighborhood.name}</h3>
+                    <p className="text-white/80 text-sm">{neighborhood.properties}</p>
+                  </div>
+                </motion.div>
               </div>
             ))}
           </div>
@@ -263,39 +290,39 @@ export function Home() {
       {/* How It Works */}
       <section className="py-12 md:py-16 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">How It Works</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">A guided journey, start to finish.</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Your journey to finding the perfect property in 4 simple steps
+              Every milestone is clear and trackable
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               {
                 step: "01",
-                title: "Consultation",
-                description: "Share your requirements and preferences with our expert team"
+                title: "Onboard & Verify",
+                description: "Quick signup, secure identity checks, and your status tracker begins with clear milestones"
               },
               {
                 step: "02",
-                title: "Property Selection",
-                description: "We curate a personalized list of properties that match your needs"
+                title: "Prepare & Publish",
+                description: "Form A, Trakheesi permit, pro media, polished listing—live on our site and top portals"
               },
               {
                 step: "03",
-                title: "Site Visits",
-                description: "Tour your shortlisted properties with our dedicated agents"
+                title: "Engage & Negotiate",
+                description: "Unified messages and calls; punctual viewings; transparent offers with clear next steps"
               },
               {
                 step: "04",
-                title: "Seamless Closing",
-                description: "We handle all paperwork and ensure a smooth transaction"
+                title: "Close & Handover",
+                description: "NOC, OA/service charges, utilities, Trustee appointment, transfer, and keys—all coordinated by us"
               }
             ].map((item, index) => (
               <motion.div
@@ -388,6 +415,73 @@ export function Home() {
         </div>
       </section> */}
 
+      {/* Trust & Compliance Section */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            className="max-w-4xl mx-auto text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full mb-6">
+              <Shield className="h-5 w-5 text-accent" />
+              <span className="text-accent font-semibold text-sm">Compliance Built-In</span>
+            </div>
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl">Compliance is built-in.</h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              We publish only with verified permits, keep bilingual contracts consistent, and maintain a complete evidence trail.
+              Data is encrypted, access is role-based, and every action is auditable—so quality and accountability are never in doubt.
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <motion.div
+              className="bg-secondary p-6 rounded-lg text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ y: -5 }}
+            >
+              <Shield className="h-10 w-10 text-accent mx-auto mb-4" />
+              <h3 className="mb-2 text-lg font-semibold">Privacy & Security</h3>
+              <p className="text-sm text-muted-foreground">
+                Role-based access, encryption in transit and at rest, and full audit logs
+              </p>
+            </motion.div>
+            <motion.div
+              className="bg-secondary p-6 rounded-lg text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ y: -5 }}
+            >
+              <FileCheck className="h-10 w-10 text-accent mx-auto mb-4" />
+              <h3 className="mb-2 text-lg font-semibold">Verified Permits</h3>
+              <p className="text-sm text-muted-foreground">
+                Trakheesi permits verified and displayed before going live
+              </p>
+            </motion.div>
+            <motion.div
+              className="bg-secondary p-6 rounded-lg text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ y: -5 }}
+            >
+              <CheckCircle2 className="h-10 w-10 text-accent mx-auto mb-4" />
+              <h3 className="mb-2 text-lg font-semibold">Bilingual Contracts</h3>
+              <p className="text-sm text-muted-foreground">
+                Form A and Form F securely e-signed in EN/AR with verifiable trails
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 lg:px-8 text-center">
@@ -401,7 +495,7 @@ export function Home() {
             <p className="text-accent-foreground/90 mb-8 max-w-2xl mx-auto">
               Let our expert team help you discover the ideal home or investment opportunity in Dubai
             </p>
-            <Button 
+            <Button
               size="lg"
               variant="secondary"
               asChild

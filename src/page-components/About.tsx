@@ -1,6 +1,6 @@
 'use client';
 
-import { Award, Target, Users, TrendingUp, Shield, Globe, Heart, Sparkles, Building, Clock, CheckCircle } from "lucide-react";
+import { Target, TrendingUp, Shield, Globe, Heart, Sparkles, Building, Clock, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -33,41 +33,59 @@ export function About() {
   //   }
   // ];
 
-  const achievements = [
-    { icon: Award, title: "Certified Excellence", description: "RERA registered and compliant real estate services" },
-    { icon: Users, title: "Client-Focused Approach", description: "Personalized service for every property journey" },
-    { icon: TrendingUp, title: "Market Expertise", description: "Deep knowledge of UAE property market trends" },
-    { icon: Target, title: "Proven Track Record", description: "Successful transactions across Dubai's prime locations" }
+  const platformFeatures = [
+    { 
+      icon: TrendingUp, 
+      title: "Smart Deal Analysis", 
+      description: "Instant property valuation using comparable sales data and market trends to help you identify fair deals"
+    },
+    { 
+      icon: Clock, 
+      title: "Real-Time Tracking", 
+      description: "Live dashboard showing your transaction progress from documentation to closing with complete transparency"
+    },
+    { 
+      icon: Shield, 
+      title: "Built-In Compliance", 
+      description: "RERA-aligned processes with Trakheesi-verified permits and bilingual contracts for complete legal security"
+    },
+    { 
+      icon: CheckCircle, 
+      title: "5-Minute Response", 
+      description: "Fast, expert support with guaranteed response times and dedicated assistance throughout your journey"
+    }
   ];
 
   const values = [
     {
       icon: Shield,
-      title: "Integrity",
-      description: "We operate with complete transparency and honesty in all our dealings, ensuring trust and confidence."
+      title: "Transparency",
+      description: "Plain language, clear steps, and real-time updates—no jargon, no surprises, just honest communication every step of the way."
     },
     {
       icon: Heart,
-      title: "Client-Centric",
-      description: "Your needs and dreams are at the heart of everything we do. We're committed to exceeding expectations."
+      title: "Service",
+      description: "Fast follow-up, proactive support, and genuine care for your goals—we treat every client relationship as a long-term partnership."
     },
     {
       icon: Sparkles,
-      title: "Excellence",
-      description: "We strive for perfection in every service we provide, from initial consultation to final handover."
+      title: "Quality",
+      description: "Professional media, verified listings, and polished presentation—every detail reflects our commitment to excellence."
     },
     {
-      icon: Globe,
-      title: "Innovation",
-      description: "Leveraging cutting-edge technology and market insights to deliver superior real estate solutions."
+      icon: CheckCircle,
+      title: "Accountability",
+      description: "Auditable actions, documented evidence, and role-based access—quality and responsibility are built into our process, not added later."
     }
   ];
 
-  const milestones = [
-    { year: "2010", title: "Company Founded", description: "Started with a vision to transform Dubai's luxury real estate market" },
-    { year: "2015", title: "Major Expansion", description: "Opened 5 new offices across UAE and expanded our team to 50+ professionals" },
-    { year: "2020", title: "Digital Transformation", description: "Launched innovative virtual tour technology and AI-powered property matching" },
-    { year: "2024", title: "Industry Leader", description: "Recognized as the #1 luxury real estate agency in Dubai" }
+  const customerPathway = [
+    { step: "01", title: "Discover", description: "Start with a consultation or browse our curated portfolio; we map your must-haves, timeline, and budget" },
+    { step: "02", title: "Verify & Prepare", description: "We streamline onboarding and documents so viewings and offers move quickly and confidently" },
+    { step: "03", title: "Experience", description: "Tour properties with accurate media and details; compare options using real market context" },
+    { step: "04", title: "Decide", description: "Make an offer with transparent terms; we manage bilingual contracts and e-signing" },
+    { step: "05", title: "Close", description: "We orchestrate clearances, NOC, Trustee appointment, and transfer" },
+    { step: "06", title: "Handover", description: "Keys, checklists, and a smooth move-in—your documents remain securely accessible for future reference" }
   ];
 
   const services = [
@@ -118,13 +136,13 @@ export function About() {
           >
             <h1 className="text-3xl md:text-5xl lg:text-6xl mb-4 px-2">About rhk Properties LLC</h1>
             <p className="text-base md:text-xl text-white/90 max-w-2xl mx-auto px-2">
-              Your trusted partner in luxury real estate since 2010
+              Client-first, technology-enabled real estate experience for Dubai
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Who We Are */}
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -134,19 +152,19 @@ export function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl">Our Story</h2>
+              <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl">Who We Are</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2010, rhk Properties LLC has grown to become one of Dubai's most trusted and respected real estate agencies. Our journey began with a simple yet powerful vision: to help people find their dream homes in one of the world's most dynamic cities.
+                  Founded in 2025, we set out to build a client-first, technology-enabled real-estate experience for Dubai—one that's as transparent as it is premium. 
+                  Our focus is simple: elevate every step of the journey with clear communication, disciplined process, and precise execution.
                 </p>
                 <p>
-                  Over the years, we have built a reputation for excellence, integrity, and personalized service. Our team of experienced professionals brings together decades of combined expertise in the UAE real estate market, with deep knowledge of every neighborhood, development, and investment opportunity.
+                  We combine professional service with modern tools to deliver an experience that feels both premium and refreshingly straightforward. 
+                  Every listing is verified, every milestone is tracked, and every interaction is designed to move you forward with confidence.
                 </p>
                 <p>
-                  Today, we're proud to have helped over 1,200 families and investors find their perfect properties, from luxury waterfront villas to contemporary downtown penthouses. Our success is measured not just in transactions, but in the lasting relationships we've built with our clients.
-                </p>
-                <p>
-                  We believe that finding the perfect property is about more than just square footage and amenities—it's about understanding your lifestyle, your dreams, and your future. That's why we take the time to truly listen and provide personalized guidance every step of the way.
+                  Our team brings deep market knowledge, proven negotiation skills, and a genuine commitment to protecting your interests. 
+                  Whether you're buying your first home or managing a property portfolio, we provide the clarity and support you deserve.
                 </p>
               </div>
             </motion.div>
@@ -225,11 +243,10 @@ export function About() {
                 <Target className="h-6 w-6 text-accent" />
               </div>
               <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl">Our Mission</h2>
-              <p className="text-muted-foreground mb-4">
-                To provide exceptional real estate services that exceed our clients' expectations, helping them make informed decisions and achieve their property goals with confidence and ease.
-              </p>
               <p className="text-muted-foreground">
-                We are committed to delivering personalized service, expert market knowledge, and innovative solutions that make the property buying, selling, and investing process seamless and rewarding.
+                We standardize the property journey end-to-end—combining transparent workflows, fast communication, and rigorous compliance. 
+                Our mission is to remove uncertainty at each milestone (onboarding, permits, media, viewings, offers, closing), empower agents with excellent tools, 
+                and give clients the real-time clarity they deserve—every transaction, every time.
               </p>
             </motion.div>
             <motion.div
@@ -244,18 +261,17 @@ export function About() {
                 <TrendingUp className="h-6 w-6 text-accent" />
               </div>
               <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl">Our Vision</h2>
-              <p className="text-muted-foreground mb-4">
-                To be the most trusted and innovative real estate company in the UAE, recognized for our integrity, expertise, and commitment to delivering outstanding results for our clients.
-              </p>
               <p className="text-muted-foreground">
-                We envision a future where every client experiences the perfect blend of technology, personal touch, and market expertise in their real estate journey.
+                To make Dubai real estate clear, confident, and delightfully efficient—where every seller and buyer can see the path ahead, 
+                trust the data behind each decision, and move forward without friction. We envision a market where transparency and quality 
+                are the standard, not the exception.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Milestones Timeline */}
+      {/* Customer Pathway */}
       <section className="py-12 md:py-20 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -265,9 +281,9 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Our Journey</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Customer Pathway</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Key milestones that shaped our success story
+              From discovery to handover—a transparent journey designed for your confidence
             </p>
           </motion.div>
           <div className="relative max-w-4xl mx-auto">
@@ -277,7 +293,7 @@ export function About() {
             <div className="md:hidden absolute left-4 top-0 h-full w-0.5 bg-accent/20" />
             
             <div className="space-y-8 md:space-y-12">
-              {milestones.map((milestone, index) => (
+              {customerPathway.map((item, index) => (
                 <motion.div
                   key={index}
                   className={`flex items-center gap-4 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
@@ -297,9 +313,9 @@ export function About() {
                       className="bg-background rounded-lg p-4 md:p-6 w-full"
                       whileHover={{ scale: 1.02, boxShadow: "0 10px 30px rgba(0,102,255,0.15)" }}
                     >
-                      <div className="text-accent mb-2 font-semibold">{milestone.year}</div>
-                      <h3 className="mb-2 text-lg">{milestone.title}</h3>
-                      <p className="text-sm text-muted-foreground">{milestone.description}</p>
+                      <div className="text-accent mb-2 font-bold text-sm">Step {item.step}</div>
+                      <h3 className="mb-2 text-lg">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
                     </motion.div>
                   </div>
 
@@ -309,9 +325,9 @@ export function About() {
                       className="bg-background rounded-lg p-6 max-w-md"
                       whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,102,255,0.15)" }}
                     >
-                      <div className="text-accent mb-2 font-semibold">{milestone.year}</div>
-                      <h3 className="mb-2">{milestone.title}</h3>
-                      <p className="text-sm text-muted-foreground">{milestone.description}</p>
+                      <div className="text-accent mb-2 font-bold text-sm">Step {item.step}</div>
+                      <h3 className="mb-2">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
                     </motion.div>
                   </div>
                   <motion.div
@@ -370,23 +386,27 @@ export function About() {
         </div>
       </section>
 
-      {/* Achievements */}
-      <section className="py-20 bg-secondary">
+      {/* Our Platform & Features */}
+      <section className="py-12 md:py-20 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">Our Achievements</h2>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full mb-4">
+              <Shield className="h-5 w-5 text-accent" />
+              <span className="text-accent font-semibold text-sm">Technology-Enabled Experience</span>
+            </div>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Our Platform & Features</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Recognized for excellence in real estate services across the UAE
+              Modern tools and processes designed to make your real estate journey transparent, efficient, and stress-free
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {achievements.map((achievement, index) => (
+            {platformFeatures.map((feature, index) => (
               <motion.div
                 key={index}
                 className="bg-background rounded-lg p-6 text-center"
@@ -402,11 +422,11 @@ export function About() {
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <achievement.icon className="h-8 w-8 text-accent" />
+                    <feature.icon className="h-8 w-8 text-accent" />
                   </motion.div>
                 </div>
-                <h3 className="mb-2">{achievement.title}</h3>
-                <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                <h3 className="mb-2 text-lg font-semibold">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}
           </div>

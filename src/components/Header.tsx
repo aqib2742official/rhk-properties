@@ -19,6 +19,7 @@ export function Header() {
     // { id: "/properties", label: "Properties", path: "/properties" },
     { id: "/about", label: "About Us", path: "/about" },
     { id: "/blog", label: "Blog", path: "/blog" },
+    { id: "/faq", label: "FAQ", path: "/faq" },
     { id: "/contact", label: "Contact", path: "/contact" },
   ];
 

@@ -16,30 +16,30 @@ const slides: Slide[] = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
-    title: "Premium Property Portfolio",
-    subtitle: "Curated Luxury Real Estate in UAE",
-    description: "Discover our exclusive collection of high-end properties across Dubai's most prestigious locations"
+    title: "Real estate, finally transparent.",
+    subtitle: "Your Trusted Property Partner",
+    description: "From first hello to handover—we guide every step with speed, clarity, and compliance, so your journey feels effortless and in control."
   },
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80",
-    title: "Expert Real Estate Services",
-    subtitle: "Your Trusted Property Partner",
-    description: "Comprehensive buying, selling, and investment advisory services tailored to your goals"
+    title: "Premium Property Portfolio",
+    subtitle: "Curated Excellence in Dubai",
+    description: "We curate a select portfolio of villas, penthouses, and apartments across Dubai's flagship neighborhoods with verified details and true-to-life media."
   },
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&q=80",
-    title: "Prime Locations Portfolio",
-    subtitle: "Dubai Marina • Downtown • Palm Jumeirah",
-    description: "Exclusive access to properties in Dubai's most sought-after neighborhoods and developments"
+    title: "A guided journey, start to finish.",
+    subtitle: "Clear Communication at Every Step",
+    description: "Quick signup, secure checks, transparent process—from onboarding to handover, every milestone is clear and trackable."
   },
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80",
-    title: "Investment Opportunities",
-    subtitle: "Maximizing Your Real Estate Returns",
-    description: "Strategic property investments with proven track record of exceptional yields and capital appreciation"
+    title: "Compliance built-in.",
+    subtitle: "RERA-aligned • Trakheesi-ready",
+    description: "Trakheesi-aligned advertising, bilingual contracts, secure e-signing, and auditable records—quality and accountability are never in doubt."
   }
 ];
 

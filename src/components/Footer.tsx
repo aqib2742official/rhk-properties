@@ -23,7 +23,7 @@ export function Footer() {
               />
             </div>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Your trusted partner in luxury real estate across the UAE. Delivering exceptional properties and unmatched service since 2010.
+              Your trusted partner for luxury real estate in the UAE—delivering clear process, quality presentation, and a premium client experience.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="hover:text-accent transition-colors">
@@ -79,6 +79,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/faq"
+                  className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
@@ -106,22 +114,23 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-sm text-primary-foreground/80">
                 <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
-                <span>Downtown Dubai, Business Bay<br />Dubai, United Arab Emirates</span>
+                <span>Office 2304 Prime Tower, Burj Khalifa Blvd<br />Business Bay, Dubai, UAE</span>
               </li>
               <li className="flex items-center space-x-3 text-sm text-primary-foreground/80">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <span>+971 4 XXX XXXX</span>
+                <span>+971 4 589 0333</span>
               </li>
               <li className="flex items-center space-x-3 text-sm text-primary-foreground/80">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <span>info@primeestates.ae</span>
+                <span>info@rhkproperties.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} rhk Properties LLC. All rights reserved.</p>
+          <p className="mb-2">&copy; {new Date().getFullYear()} rhk Properties LLC. All rights reserved.</p>
+          <p className="text-xs">EN/AR • RERA-aligned • Trakheesi-ready</p>
         </div>
       </div>
     </footer>
