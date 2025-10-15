@@ -16,32 +16,33 @@ const slides: Slide[] = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80",
-    title: "Real estate, finally transparent.",
-    subtitle: "Your Trusted Property Partner",
-    description: "From first hello to handover—we guide every step with speed, clarity, and compliance, so your journey feels effortless and in control."
+    title: "Real Estate, Finally Transparent.",
+    subtitle: "From First Hello to Handover",
+    description: "Experience a seamless property journey with clarity, speed, and complete compliance. Your trusted partner for a confident real estate experience."
   },
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80",
-    title: "Premium Property Portfolio",
-    subtitle: "Curated Excellence in Dubai",
-    description: "We curate a select portfolio of villas, penthouses, and apartments across Dubai's flagship neighborhoods with verified details and true-to-life media."
+    title: "Premium Property Portfolio.",
+    subtitle: "Curated Homes Across Dubai’s Flagship Neighborhoods.",
+    description: "Explore verified villas, penthouses, and apartments presented with true-to-life media, transparent details, and consistent quality."
   },
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&q=80",
-    title: "A guided journey, start to finish.",
-    subtitle: "Clear Communication at Every Step",
-    description: "Quick signup, secure checks, transparent process—from onboarding to handover, every milestone is clear and trackable."
+    title: "A Guided Journey, Start to Finish.",
+    subtitle: "Transparent. Efficient. Effortless.",
+    description: "From onboarding to handover, secure checks, clear milestones, and proactive updates keep your property experience smooth and stress-free."
   },
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80",
-    title: "Compliance built-in.",
-    subtitle: "RERA-aligned • Trakheesi-ready",
-    description: "Trakheesi-aligned advertising, bilingual contracts, secure e-signing, and auditable records—quality and accountability are never in doubt."
+    title: "Compliance Built-In.",
+    subtitle: "RERA-Aligned • Trakheesi-Ready • Privacy-First.",
+    description: "Built on trust and accountability with bilingual contracts, secure e-signing, and verified advertising to ensure every step meets Dubai's real estate standards."
   }
 ];
+
 
 export function PremiumSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -135,7 +136,7 @@ export function PremiumSlider() {
                   transition={{ delay: 0.5, duration: 0.6 }}
                   className="inline-block mb-4 px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full border border-accent/30"
                 >
-                  <span className="text-[#1E2370]">{slides[currentIndex].subtitle}</span>
+                  <span className="text-gray-200">{slides[currentIndex].subtitle}</span>
                 </motion.div>
 
                 <motion.h2
@@ -194,11 +195,10 @@ export function PremiumSlider() {
           <motion.button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`h-2 rounded-full transition-all ${
-              index === currentIndex 
-                ? "bg-accent w-12" 
+            className={`h-2 rounded-full transition-all ${index === currentIndex
+                ? "bg-accent w-12"
                 : "bg-white/40 w-2 hover:bg-white/60"
-            }`}
+              }`}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
           />
@@ -215,11 +215,11 @@ export function PremiumSlider() {
         <span className="text-white/60 text-xs uppercase tracking-wider">Scroll</span>
         <motion.div
           className="w-0.5 h-8 bg-white/40"
-          animate={{ 
+          animate={{
             scaleY: [1, 1.5, 1],
             opacity: [0.4, 0.8, 0.4]
           }}
-          transition={{ 
+          transition={{
             duration: 1.5,
             repeat: Infinity,
             ease: "easeInOut"

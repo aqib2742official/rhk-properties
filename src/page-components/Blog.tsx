@@ -14,9 +14,9 @@ export function Blog() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="mb-4">Latest News & Insights</h1>
+          <h1 className="mb-4">Insights & Guides</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Stay informed with the latest trends, tips, and news from the Dubai real estate market
+            Short reads on market trends, community deep-dives, home tours, and closing essentials. Practical context to help you decide with confidence
           </p>
         </div>
 

@@ -161,7 +161,7 @@ export function Contact() {
           <div className="bg-card rounded-xl p-4 md:p-5 dark:bg-gray-800  border border-gray-200 dark:border-gray-700">
             <h2 className="mb-4 md:mb-5 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100">Send us a Message</h2>
             <p className="text-xs text-muted-foreground mb-4">
-              We'll use your details only to respond to your inquiry. Tell us your budget, area, and timing—we'll tailor recommendations to fit.
+              We'll use your details only to respond to your inquiry. Tell us your budget, area, and timing, and we'll tailor recommendations to fit.
             </p>
             <form onSubmit={handleSubmit} className="space-y-2">
               <InputField

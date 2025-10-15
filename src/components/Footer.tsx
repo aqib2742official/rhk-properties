@@ -11,19 +11,19 @@ export function Footer() {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 lg:px-8 py-12">
+      <div className="container mx-auto px-4 lg:px-8 py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img
                 src={theme === 'dark' ? logoLight.src : logoDark.src}
-                alt="rhk Properties LLC"
+                alt="RHK Properties LLC"
                 className="h-10 w-auto"
               />
             </div>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Your trusted partner for luxury real estate in the UAE—delivering clear process, quality presentation, and a premium client experience.
+              Your trusted partner for luxury real estate in the UAE, delivering clear process, quality presentation, and a premium client experience.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="hover:text-accent transition-colors">
@@ -82,7 +82,7 @@ export function Footer() {
                   href="/faq"
                   className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
-                  FAQ
+                  FAQ's
                 </Link>
               </li>
               <li>
@@ -128,8 +128,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p className="mb-2">&copy; {new Date().getFullYear()} rhk Properties LLC. All rights reserved.</p>
+        <div className="border-t border-primary-foreground/20 mt-4 pt-4 text-center text-sm text-primary-foreground/60">
+          <p className="mb-2">&copy; {new Date().getFullYear()} RHK Properties LLC. All rights reserved.</p>
           <p className="text-xs">EN/AR • RERA-aligned • Trakheesi-ready</p>
         </div>
       </div>

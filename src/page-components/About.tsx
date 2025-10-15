@@ -60,22 +60,22 @@ export function About() {
     {
       icon: Shield,
       title: "Transparency",
-      description: "Plain language, clear steps, and real-time updates—no jargon, no surprises, just honest communication every step of the way."
+      description: "Plain language, clear steps, and real-time updates. No jargon, no surprises, just honest communication every step of the way."
     },
     {
       icon: Heart,
       title: "Service",
-      description: "Fast follow-up, proactive support, and genuine care for your goals—we treat every client relationship as a long-term partnership."
+      description: "Fast follow-up, proactive support, and genuine care for your goals. We treat every client relationship as a long-term partnership."
     },
     {
       icon: Sparkles,
       title: "Quality",
-      description: "Professional media, verified listings, and polished presentation—every detail reflects our commitment to excellence."
+      description: "Professional media, verified listings, and polished presentation. Every detail reflects our commitment to excellence."
     },
     {
       icon: CheckCircle,
       title: "Accountability",
-      description: "Auditable actions, documented evidence, and role-based access—quality and responsibility are built into our process, not added later."
+      description: "Auditable actions, documented evidence, and role-based access. Quality and responsibility are built into our process, not added later."
     }
   ];
 
@@ -85,7 +85,7 @@ export function About() {
     { step: "03", title: "Experience", description: "Tour properties with accurate media and details; compare options using real market context" },
     { step: "04", title: "Decide", description: "Make an offer with transparent terms; we manage bilingual contracts and e-signing" },
     { step: "05", title: "Close", description: "We orchestrate clearances, NOC, Trustee appointment, and transfer" },
-    { step: "06", title: "Handover", description: "Keys, checklists, and a smooth move-in—your documents remain securely accessible for future reference" }
+    { step: "06", title: "Handover", description: "Keys, checklists, and a smooth move-in. Your documents remain securely accessible for future reference" }
   ];
 
   const services = [
@@ -124,7 +124,7 @@ export function About() {
         >
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzNDcwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="About rhk Properties LLC"
+            alt="About RHK Properties LLC"
             className="w-full h-full object-cover opacity-100"
           />
         </motion.div>
@@ -134,7 +134,7 @@ export function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <h1 className="text-3xl md:text-5xl lg:text-6xl mb-4 px-2">About rhk Properties LLC</h1>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl mb-4 px-2">About RHK Properties LLC</h1>
             <p className="text-base md:text-xl text-white/90 max-w-2xl mx-auto px-2">
               Client-first, technology-enabled real estate experience for Dubai
             </p>
@@ -155,7 +155,7 @@ export function About() {
               <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl">Who We Are</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2025, we set out to build a client-first, technology-enabled real-estate experience for Dubai—one that's as transparent as it is premium. 
+                  Founded in 2025, we set out to build a client-first, technology-enabled real-estate experience for Dubai, one that's as transparent as it is premium. 
                   Our focus is simple: elevate every step of the journey with clear communication, disciplined process, and precise execution.
                 </p>
                 <p>
@@ -177,8 +177,8 @@ export function About() {
               whileHover={{ scale: 1.05 }}
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1707917228955-1ea125182d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkdWJhaSUyMHNreWxpbmUlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA0MjQ5MjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Dubai Skyline"
+                src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1080&q=80"
+                alt="RHK Properties Team"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -244,9 +244,9 @@ export function About() {
               </div>
               <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl">Our Mission</h2>
               <p className="text-muted-foreground">
-                We standardize the property journey end-to-end—combining transparent workflows, fast communication, and rigorous compliance. 
+                We standardize the property journey end-to-end by combining transparent workflows, fast communication, and rigorous compliance. 
                 Our mission is to remove uncertainty at each milestone (onboarding, permits, media, viewings, offers, closing), empower agents with excellent tools, 
-                and give clients the real-time clarity they deserve—every transaction, every time.
+                and give clients the real-time clarity they deserve for every transaction, every time.
               </p>
             </motion.div>
             <motion.div
@@ -262,7 +262,7 @@ export function About() {
               </div>
               <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl">Our Vision</h2>
               <p className="text-muted-foreground">
-                To make Dubai real estate clear, confident, and delightfully efficient—where every seller and buyer can see the path ahead, 
+                To make Dubai real estate clear, confident, and delightfully efficient where every seller and buyer can see the path ahead, 
                 trust the data behind each decision, and move forward without friction. We envision a market where transparency and quality 
                 are the standard, not the exception.
               </p>
@@ -283,7 +283,7 @@ export function About() {
           >
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Customer Pathway</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              From discovery to handover—a transparent journey designed for your confidence
+              From discovery to handover, a transparent journey designed for your confidence
             </p>
           </motion.div>
           <div className="relative max-w-4xl mx-auto">

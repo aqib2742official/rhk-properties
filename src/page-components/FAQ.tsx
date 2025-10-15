@@ -111,7 +111,7 @@ export function FAQ() {
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6">Frequently Asked Questions</h1>
             <p className="text-muted-foreground text-lg">
-              Everything you need to know about buying, selling, and investing in Dubai real estate with rhk Properties LLC
+              Everything you need to know about buying, selling, and investing in Dubai real estate with RHK Properties LLC
             </p>
           </motion.div>
         </div>

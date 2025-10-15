@@ -49,7 +49,7 @@ export function Home() {
                 <TrendingUp className="h-12 w-12 text-accent" />
               </motion.div>
               <h3 className="text-lg font-semibold mb-2">Live Status Tracking</h3>
-              <p className="text-muted-foreground text-sm">KYC → Form A → permit → media → viewings → offers → closing—see progress in real time</p>
+              <p className="text-muted-foreground text-sm">KYC → Form A → permit → media → viewings → offers → closing. See progress in real time</p>
             </motion.div>
 
             <motion.div
@@ -129,7 +129,7 @@ export function Home() {
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">Premium Property Portfolio</h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
               We curate a select portfolio of villas, penthouses, and apartments across Dubai's flagship neighborhoods.
-              Expect verified details, true-to-life media, and clean, consistent presentation—so decisions are easy and informed.
+              Expect verified details, true-to-life media, and clean, consistent presentation so decisions are easy and informed.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 auto-rows-fr">
@@ -220,7 +220,7 @@ export function Home() {
             <div className="relative h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjAzNDcwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="rhk Properties LLC Office"
+                alt="RHK Properties LLC Office"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -312,7 +312,7 @@ export function Home() {
               {
                 step: "02",
                 title: "Prepare & Publish",
-                description: "Form A, Trakheesi permit, pro media, polished listing—live on our site and top portals"
+                description: "Form A, Trakheesi permit, pro media, polished listing live on our site and top portals"
               },
               {
                 step: "03",
@@ -322,7 +322,7 @@ export function Home() {
               {
                 step: "04",
                 title: "Close & Handover",
-                description: "NOC, OA/service charges, utilities, Trustee appointment, transfer, and keys—all coordinated by us"
+                description: "NOC, OA/service charges, utilities, Trustee appointment, transfer, and keys, all coordinated by us"
               }
             ].map((item, index) => (
               <motion.div
@@ -371,7 +371,7 @@ export function Home() {
                 name: "Sarah Williams",
                 role: "Penthouse Owner",
                 image: "https://images.unsplash.com/photo-1513807016779-d51c0c026263?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMGhvbWV8ZW58MXx8fHwxNzYwMzQ0NzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-                text: "rhk Properties LLC made our dream of owning a Dubai property come true. Their professionalism and attention to detail were exceptional."
+                text: "RHK Properties LLC made our dream of owning a Dubai property come true. Their professionalism and attention to detail were exceptional."
               },
               {
                 name: "Ahmed Al-Rashid",
@@ -432,7 +432,7 @@ export function Home() {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl">Compliance is built-in.</h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
               We publish only with verified permits, keep bilingual contracts consistent, and maintain a complete evidence trail.
-              Data is encrypted, access is role-based, and every action is auditable—so quality and accountability are never in doubt.
+              Data is encrypted, access is role-based, and every action is auditable so quality and accountability are never in doubt.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
