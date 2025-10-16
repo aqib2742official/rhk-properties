@@ -50,6 +50,7 @@
   --muted-foreground: #9CA3AF;
   --accent: #1E2370;
   --accent-foreground: #FFFFFF;
+  --accent-text: #A5B4FC; /* Light indigo for text in dark mode */
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
   --border: transparent;
@@ -256,4 +257,26 @@ img {
 /* Remove outline ring from non-interactive elements */
 div, span, p, h1, h2, h3, h4, h5, h6 {
   outline: none !important;
+}
+
+/* Ensure SVG icons inherit proper colors from parent text color */
+svg {
+  color: currentColor;
+}
+
+/* Force SVG icons in dark mode to be light colored when not explicitly styled */
+.dark svg:not([class*="text-"]) {
+  color: var(--foreground);
+}
+
+/* Override text-accent in dark mode to use light color for better contrast */
+.dark .text-accent,
+.dark .text-accent svg {
+  color: #E0E7FF !important;
+}
+
+/* Ensure hover states also use appropriate colors */
+.dark .hover\:text-accent:hover,
+.dark .hover\:text-accent:hover svg {
+  color: #E0E7FF !important;
 }

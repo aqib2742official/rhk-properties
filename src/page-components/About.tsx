@@ -498,7 +498,7 @@ export function About() {
             </p>
             <Link href="/contact">
               <motion.button
-                className="inline-block px-6 py-3 md:px-8 md:py-4 bg-white text-accent rounded-lg hover:bg-white/90 transition-colors cursor-pointer text-sm md:text-base"
+                className="inline-block px-6 py-3 md:px-8 md:py-4 bg-white text-gray-700 rounded-lg hover:bg-white/90 transition-colors cursor-pointer text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

@@ -19,7 +19,7 @@ export function Footer() {
               <img
                 src={theme === 'dark' ? logoLight.src : logoDark.src}
                 alt="RHK Properties LLC"
-                className="h-10 w-auto"
+                className="h-10 w-[200px]"
               />
             </div>
             <p className="text-sm text-primary-foreground/80 mb-4">

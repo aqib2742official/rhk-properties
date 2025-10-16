@@ -40,7 +40,7 @@ export function Header() {
             <img
               src={theme === 'light' ? logoLight.src : logoDark.src}
               alt="RHK Properties LLC"
-              className="h-12 w-auto"
+              className="w-[200px]"
             />
           </Link>
 

@@ -25,16 +25,7 @@ export function FAQ() {
       question: "How do I begin my property search?",
       answer: "Start by contacting us for a consultation where we'll discuss your requirements, budget, and timeline. You can also browse our curated portfolio on our website. We'll create a personalized search strategy tailored to your needs."
     },
-    {
-      category: "Process & Timeline",
-      question: "What is the typical timeline for buying a property?",
-      answer: "The complete process typically takes 4-8 weeks from initial viewing to handover, depending on factors like mortgage approval, NOC processing, and developer requirements. We provide a real-time status tracker so you always know where you stand."
-    },
-    {
-      category: "Process & Timeline",
-      question: "Can I track the progress of my transaction?",
-      answer: "Yes! Your personal status tracker shows real-time progress through each milestone: verification, documentation, property preparation, viewings, offer negotiation, and closing. You'll have complete visibility from start to finish."
-    },
+
     {
       category: "Documentation & Compliance",
       question: "Do you publish properties without proper permits?",
@@ -151,7 +142,6 @@ export function FAQ() {
                   transition={{ duration: 0.5 }}
                 >
                   {category === "Getting Started" && <Home className="h-6 w-6 text-accent" />}
-                  {category === "Process & Timeline" && <Clock className="h-6 w-6 text-accent" />}
                   {category === "Documentation & Compliance" && <FileCheck className="h-6 w-6 text-accent" />}
                   {category === "Closing & Handover" && <CheckCircle className="h-6 w-6 text-accent" />}
                   {category === "Security & Privacy" && <Shield className="h-6 w-6 text-accent" />}
@@ -224,7 +214,7 @@ export function FAQ() {
             </p>
             <Link href="/contact">
               <motion.button
-                className="inline-block px-6 py-3 md:px-8 md:py-4 bg-white text-accent rounded-lg hover:bg-white/90 transition-colors cursor-pointer text-sm md:text-base font-semibold"
+                className="inline-block px-6 py-3 md:px-8 md:py-4 bg-white text-gray-700 rounded-lg hover:bg-white/90 transition-colors cursor-pointer text-sm md:text-base font-semibold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

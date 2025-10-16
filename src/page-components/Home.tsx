@@ -328,15 +328,15 @@ export function Home() {
               <motion.div
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <motion.div
-                  className="relative inline-block mb-6"
-                  whileHover={{ scale: 1.1, rotateY: 180 }}
-                  transition={{ duration: 0.6 }}
+                <motion.div 
+                  className="relative inline-block mb-6 cursor-pointer"
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center">
                     <span className="text-accent text-2xl">{item.step}</span>
