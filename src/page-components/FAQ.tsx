@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "motion/react";
-import { ChevronDown, CheckCircle, Shield, Clock, FileCheck, Users, Home } from "lucide-react";
+import { ChevronDown, CheckCircle, Shield, FileCheck, Users, Home } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
